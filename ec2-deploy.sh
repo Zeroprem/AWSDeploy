@@ -30,7 +30,7 @@ cd backend
 mvn clean package -DskipTests
 cd ..
 
-# Setup Nginx with pre-built frontend
+# Setup Nginx with pre-built frontend (no Node.js needed!)
 echo "🌐 Configuring Nginx..."
 sudo mkdir -p /var/www/html
 sudo rm -rf /var/www/html/*
