@@ -1,0 +1,9 @@
+/Users/ptarange/Simpli/Full/backend/src/main/java/com/employee/management/repository/EmployeeRepository.java
+/Users/ptarange/Simpli/Full/backend/src/main/java/com/employee/management/exception/ResourceNotFoundException.java
+/Users/ptarange/Simpli/Full/backend/src/main/java/com/employee/management/exception/GlobalExceptionHandler.java
+/Users/ptarange/Simpli/Full/backend/src/main/java/com/employee/management/controller/EmployeeController.java
+/Users/ptarange/Simpli/Full/backend/src/main/java/com/employee/management/service/EmployeeService.java
+/Users/ptarange/Simpli/Full/backend/src/main/java/com/employee/management/config/CorsConfig.java
+/Users/ptarange/Simpli/Full/backend/src/main/java/com/employee/management/entity/Employee.java
+/Users/ptarange/Simpli/Full/backend/src/main/java/com/employee/management/exception/DuplicateEmailException.java
+/Users/ptarange/Simpli/Full/backend/src/main/java/com/employee/management/EmployeeManagementApplication.java
