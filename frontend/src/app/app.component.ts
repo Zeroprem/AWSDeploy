@@ -30,7 +30,7 @@ import { EmployeeListComponent } from './components/employee-list/employee-list.
       </main>
       
       <footer class="app-footer">
-        <p>&copy; 2024 Employee Management System. Built with Angular & Spring Boot.</p>
+        <p>&copy; 2024 Employee Management System. Built with Angular & Spring Boot by Premchand Tarange</p>
       </footer>
     </div>
   `,
