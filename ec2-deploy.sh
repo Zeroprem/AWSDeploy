@@ -16,11 +16,6 @@ sudo yum install java-17-amazon-corretto -y
 echo "📦 Installing Maven..."
 sudo yum install maven -y
 
-# Install Node.js
-echo "📦 Installing Node.js..."
-curl -fsSL https://rpm.nodesource.com/setup_18.x | sudo bash -
-sudo yum install nodejs -y
-
 # Install Nginx
 echo "📦 Installing Nginx..."
 sudo yum install nginx -y
@@ -35,18 +30,11 @@ cd backend
 mvn clean package -DskipTests
 cd ..
 
-# Build Frontend
-echo "🎨 Building Frontend..."
-cd frontend
-npm install
-npm run build
-cd ..
-
-# Setup Nginx
+# Setup Nginx with pre-built frontend
 echo "🌐 Configuring Nginx..."
 sudo mkdir -p /var/www/html
 sudo rm -rf /var/www/html/*
-sudo cp -r frontend/dist/employee-management/browser/* /var/www/html/ 2>/dev/null || sudo cp -r frontend/dist/employee-management/* /var/www/html/
+sudo cp -r frontend/dist/employee-management/browser/* /var/www/html/
 sudo chmod -R 755 /var/www/html
 sudo chown -R nginx:nginx /var/www/html
 
@@ -101,6 +89,7 @@ EOF
 
 # Start backend service
 sudo systemctl daemon-reload
+sudo systemctl stop employee-app 2>/dev/null
 sudo systemctl start employee-app
 sudo systemctl enable employee-app
 
@@ -117,4 +106,3 @@ echo "  Check backend:  sudo systemctl status employee-app"
 echo "  Check nginx:    sudo systemctl status nginx"
 echo "  View logs:      sudo journalctl -u employee-app -f"
 echo ""
-
